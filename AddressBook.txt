@@ -1,0 +1,36 @@
+#uc1 Ability to create a Address Book Service DB
+
+mysql> #uc1
+mysql> create database Address_Book_Service;
+ERROR 1007 (HY000): Can't create database 'address_book_service'; database exists
+mysql> create database Address_Book_Service1;
+Query OK, 1 row affected (0.12 sec)
+
+mysql> show databases;
++------------------------+
+| Database               |
++------------------------+
+| adddressbook_services1 |
+| address_book_service   |
+| address_book_service1  |
+| addressbook_service    |
+| addressbook_service1   |
+| addressbook_service5   |
+| addressbook_service6   |
+| addressbook_services   |
+| information_schema     |
+| mysql                  |
+| payroll_service        |
+| payroll_services       |
+| payroll_services1      |
+| performance_schema     |
+| sys                    |
++------------------------+
+15 rows in set (0.00 sec)
+
+mysql> USE Address_Book_Service1;
+Database changed
+************************************************************************
+
+
+
