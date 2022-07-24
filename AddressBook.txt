@@ -55,4 +55,25 @@ mysql> desc addressbook;
 7 rows in set (0.00 sec)
 *******************************************************************
 
+ #uc3Ability to insert new Contacts to Address Book
+
+mysql>  INSERT INTO addressbook(firstName,lastName,mobileNumber,email,city,state,zip) VALUES
+    ->     ('Mohammed','Atif','9854712563','abc@gmail.com','Bangalore','Karnataka',560039),
+    ->     ('Salman','Khan','9652314750','xyz@gmail.com','Bangalore','Karnataka',560001),
+    ->     ('xyz','abc','8523697412','bca@gmail.com','Bangalore','Karnataka',560002);
+Query OK, 3 rows affected (0.10 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from addressBook;
++-----------+----------+--------------+---------------+-----------+-----------+--------+
+| firstName | lastName | mobileNumber | email         | city      | state     | zip    |
++-----------+----------+--------------+---------------+-----------+-----------+--------+
+| Mohammed  | Atif     | 9854712563   | abc@gmail.com | Bangalore | Karnataka | 560039 |
+| Salman    | Khan     | 9652314750   | xyz@gmail.com | Bangalore | Karnataka | 560001 |
+| xyz       | abc      | 8523697412   | bca@gmail.com | Bangalore | Karnataka | 560002 |
++-----------+----------+--------------+---------------+-----------+-----------+--------+
+3 rows in set (0.00 sec)
+
+****************************************************************************
+
 
