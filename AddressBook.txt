@@ -75,5 +75,31 @@ mysql> select * from addressBook;
 3 rows in set (0.00 sec)
 
 ****************************************************************************
+#uc4 Ability to edit existing contat person using their name
 
+mysql> UPDATE addressBook set MobileNumber= "8547120325" where FirstName='Mohammed';
+Query OK, 1 row affected (0.08 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
 
+mysql> UPDATE addressBook set Zip= "560010" where FirstName='Mohammed';
+Query OK, 1 row affected (0.07 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE addressBook set State= 'Telangana' where FirstName='Mohammed';
+Query OK, 1 row affected (0.07 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE addressBook set City= 'Hyderabad' where FirstName='Mohammed';
+Query OK, 1 row affected (0.07 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from addressBook;
++-----------+----------+--------------+---------------+-----------+-----------+--------+
+| firstName | lastName | mobileNumber | email         | city      | state     | zip    |
++-----------+----------+--------------+---------------+-----------+-----------+--------+
+| Mohammed  | Atif     | 8547120325   | abc@gmail.com | Hyderabad | Telangana | 560010 |
+| Salman    | Khan     | 9652314750   | xyz@gmail.com | Bangalore | Karnataka | 560001 |
+| xyz       | abc      | 8523697412   | bca@gmail.com | Bangalore | Karnataka | 560002 |
++-----------+----------+--------------+---------------+-----------+-----------+--------+
+3 rows in set (0.00 sec)
+******************************************************************************
