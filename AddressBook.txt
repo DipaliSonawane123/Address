@@ -178,3 +178,15 @@ mysql>  SELECT state,COUNT(state) as count from addressBook group by state;
 1 row in set (0.00 sec)
 
 **************************************************************************
+#uc8Ability to retrieve entries sorted alphabetically by
+Person’s name for a given city
+
+tName | lastName |
++-----------+----------+
+| Dipali    | Sonawane |
+| Salman    | Khan     |
+| xyz       | abc      |
++-----------+----------+
+3 rows in set (0.00 sec)
+
+******************************************************************
