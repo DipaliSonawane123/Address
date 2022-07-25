@@ -103,3 +103,19 @@ mysql> select * from addressBook;
 +-----------+----------+--------------+---------------+-----------+-----------+--------+
 3 rows in set (0.00 sec)
 ******************************************************************************
+
+#uc5Ability to delete a person using person's name
+
+mysql> DELETE from addressBook where FirstName='Mohammed';
+Query OK, 1 row affected (0.14 sec)
+
+mysql> select * from addressBook;
++-----------+----------+--------------+---------------+-----------+-----------+--------+
+| firstName | lastName | mobileNumber | email         | city      | state     | zip    |
++-----------+----------+--------------+---------------+-----------+-----------+--------+
+| Salman    | Khan     | 9652314750   | xyz@gmail.com | Bangalore | Karnataka | 560001 |
+| xyz       | abc      | 8523697412   | bca@gmail.com | Bangalore | Karnataka | 560002 |
++-----------+----------+--------------+---------------+-----------+-----------+--------+
+2 rows in set (0.00 sec)
+
+**************************************************
