@@ -248,3 +248,25 @@ mysql> select type, Count(type) from addressBook group by type;
 3 rows in set (0.00 sec)
 
 *********************************************************************
+#uc11Ability to add person to both Friend and Family
+
+mysql>  INSERT INTO addressbook(firstName,lastName,type,mobileNumber,email,city,state,zip) VALUES
+    ->      ('Manoj','Sonawane','Friend','9856321478','abc@yahoo.com','Pune','Maharashtra',560039);
+Query OK, 1 row affected (0.07 sec)
+
+mysql>  INSERT INTO addressbook(firstName,lastName,type,mobileNumber,email,city,state,zip) VALUES
+    ->      ('Virat','Kholi','Family','9632105478','xyz@yahoo.com','Mumbai','Maharashtra',560040);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> select * from addressBook;
++-----------+----------+------------+--------------+---------------+-----------+-------------+--------+
+| firstName | lastName | type       | mobileNumber | email         | city      | state       | zip    |
++-----------+----------+------------+--------------+---------------+-----------+-------------+--------+
+| Dipali    | Sonawane | Family     | 9854712563   | abc@gmail.com | Bangalore | Karnataka   | 560039 |
+| Manoj     | Sonawane | Friend     | 9856321478   | abc@yahoo.com | Pune      | Maharashtra | 560039 |
+| Salman    | Khan     | Profession | 9652314750   | xyz@gmail.com | Bangalore | Karnataka   | 560001 |
+| Virat     | Kholi    | Family     | 9632105478   | xyz@yahoo.com | Mumbai    | Maharashtra | 560040 |
+| xyz       | abc      | Friend     | 8523697412   | bca@gmail.com | Bangalore | Karnataka   | 560002 |
++-----------+----------+------------+--------------+---------------+-----------+-------------+--------+
+5 rows in set (0.00 sec)
+*************************************************
